@@ -18,8 +18,6 @@ public class PlayerMovement : MonoBehaviour
     private float inputAxis;
 
     public float moveSpeed = 8f;
-    public float accelerationSpeed = 5f;
-    public float decelerationSpeed = -1f;
     public float maxJumpHeight = 5f;
     public float maxJumpTime = 1f;
     
@@ -105,7 +103,8 @@ public class PlayerMovement : MonoBehaviour
         if(takingInput)
         {
             inputAxis = Input.GetAxis("Horizontal");
-            velocity.x = Mathf.MoveTowards(velocity.x, inputAxis * moveSpeed, moveSpeed * Time.deltaTime);
+            velocity.x = inputAxis * moveSpeed;
+            //Mathf.MoveTowards(velocity.x, inputAxis * moveSpeed, moveSpeed * Time.deltaTime);
 
             if(rigidbody.Raycast(Vector2.right * velocity.x))
             {
