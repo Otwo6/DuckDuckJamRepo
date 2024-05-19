@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     private float inputAxis;
 
     public float moveSpeed = 8f;
+    public float accelerationSpeed = 5f;
+    public float decelerationSpeed = -1f;
     public float maxJumpHeight = 5f;
     public float maxJumpTime = 1f;
     
