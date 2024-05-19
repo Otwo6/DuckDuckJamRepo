@@ -151,11 +151,11 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 position = rigidbody.position;
         position += velocity * Time.fixedDeltaTime;
-
+/**
         Vector2 leftEdge = camera.ScreenToWorldPoint(Vector2.zero);
         Vector2 rightEdge = camera.ScreenToWorldPoint(new Vector2(Screen.width, Screen.height));
         position.x = Mathf.Clamp(position.x, leftEdge.x + 0.5f, rightEdge.x - 0.5f);
-
+*/
         rigidbody.MovePosition(position);
     }
 
