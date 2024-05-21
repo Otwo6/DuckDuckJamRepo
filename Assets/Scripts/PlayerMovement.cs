@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
     public bool running => Mathf.Abs(velocity.x) > 0.25f || Mathf.Abs(inputAxis) > 0.25f;
     public bool sliding => (inputAxis > 0f && velocity.x < 0f) || (inputAxis < 0f && velocity.x > 0f);
 	public bool doubleJump = true;
+    public bool hasDoubleJump = false;
 
     public int lives;
 
@@ -67,7 +68,7 @@ public class PlayerMovement : MonoBehaviour
         {
             GroundedMovement();
         }
-		else if(Input.GetButtonDown("Jump") && takingInput && doubleJump)
+		else if(Input.GetButtonDown("Jump") && takingInput && doubleJump && hasDoubleJump)
         {
             velocity.y = jumpForce;
             jumping = true;
