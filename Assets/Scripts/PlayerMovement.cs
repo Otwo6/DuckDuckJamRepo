@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public bool hasDoubleJump = false;
 
     public int lives;
+	public Vector3 respawnPoint;
 
     public GameObject interactWidget;
     public bool inWidget;
@@ -145,6 +146,8 @@ public class PlayerMovement : MonoBehaviour
             velocity.y = jumpForce;
             jumping = true;
         }
+
+		respawnPoint = new Vector3(transform.position.x, transform.position.y + 1.0f, transform.position.z);
     }
 
     private void ApplyGravity()
@@ -186,14 +189,32 @@ public class PlayerMovement : MonoBehaviour
         velocity.y = jumpForce;
         velocity.x = 0f;
         capsuleCollider.enabled = false;
-        takingInput = false;
         lives -= 1;
-        dead = true;
-        deathScreen.SetActive(true);
+        
 
         if(lives <= 0)
         {
             print("You suck bruh restart ong ong");
         }
+		else
+		{
+			print("Something");
+			StartCoroutine(Respawn());
+		}
+    }
+
+	private IEnumerator Respawn()
+    {
+        // Wait for some time before respawning (e.g., 2 seconds)
+        yield return new WaitForSeconds(1);
+
+        // Reset player position to respawn point
+        transform.position = respawnPoint;
+
+        // Reset velocity
+        velocity = Vector2.zero;
+
+        // Re-enable collider
+        capsuleCollider.enabled = true;
     }
 }

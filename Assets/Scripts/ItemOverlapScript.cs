@@ -6,7 +6,7 @@ public class ItemOverlapScript : MonoBehaviour
     TimeManager playerTimeManager;
 
     public bool doubleJump;
-    
+    public bool pirateTime;
     // This method is called when the script instance is being loaded
     private void Start()
     {
@@ -32,6 +32,11 @@ public class ItemOverlapScript : MonoBehaviour
                 playerTimeManager.hasMedieval = true;
                 Destroy(gameObject);
             }
+			if(pirateTime)
+			{
+				playerTimeManager.hasPirate = true;
+                Destroy(gameObject);
+			}
         }
     }
 }
