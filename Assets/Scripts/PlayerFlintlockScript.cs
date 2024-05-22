@@ -6,7 +6,7 @@ public class PlayerFlintlockScript : MonoBehaviour
 {
     [SerializeField] GameObject bulletPrefab;
     PlayerMovement playerMove;
-    // Update is called once per frame
+
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
