@@ -20,6 +20,8 @@ public class PlayerMovement : MonoBehaviour
     public float moveSpeed = 8f;
     public float maxJumpHeight = 5f;
     public float maxJumpTime = 1f;
+
+    public bool facingLeft;
     
     public float jumpForce => (2f * maxJumpHeight) / (maxJumpTime / 2f);
     public float gravity => (-2f * maxJumpHeight) / Mathf.Pow((maxJumpTime / 2f), 2);
@@ -123,10 +125,12 @@ public class PlayerMovement : MonoBehaviour
             if(velocity.x > 0f)
             {
                 transform.eulerAngles = Vector3.zero;
+                facingLeft = false;
             }
             else if(velocity.x < 0f)
             {
                 transform.eulerAngles = new Vector3(0f, 180f, 0f);
+                facingLeft = true;
             }
         }
         else

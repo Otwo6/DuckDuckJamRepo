@@ -14025,6 +14025,19 @@ MonoBehaviour:
   pirateMap: {fileID: 506734147}
   hasMedieval: 0
   hasPirate: 0
+--- !u!114 &763760475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689018888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb97b77537cef8b498bfa38d15c23022, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 8717964937424290653, guid: d57e099e50500b547b48830366478b51, type: 3}
 --- !u!1 &764803860
 GameObject:
   m_ObjectHideFlags: 0
