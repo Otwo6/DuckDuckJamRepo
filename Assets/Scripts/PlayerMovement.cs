@@ -52,6 +52,7 @@ public class PlayerMovement : MonoBehaviour
     {
         takingInput = true;
         lives = 3;
+        respawnPoint = transform.position;
     }
 
     private void Update()
@@ -188,8 +189,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void die()
     {
-        velocity.y = jumpForce;
-        velocity.x = 0f;
+        velocity.y = jumpForce * 2.0f;
+        velocity.x = Mathf.Sign(velocity.x) * 1.0f;
         capsuleCollider.enabled = false;
         lives -= 1;
         
