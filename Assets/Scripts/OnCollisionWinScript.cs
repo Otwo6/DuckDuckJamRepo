@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class OnCollisionWinScript : MonoBehaviour
 {
@@ -10,10 +12,7 @@ public class OnCollisionWinScript : MonoBehaviour
     {
         if(col.gameObject.tag == "Player")
         {
-            PlayerMovement playerScript = col.gameObject.GetComponent<PlayerMovement>();
-            playerScript.dead = true;
-            playerScript.takingInput = false;
-            winScreen.SetActive(true);
+            SceneManager.LoadScene("EndMenu");
         }
     }
 }

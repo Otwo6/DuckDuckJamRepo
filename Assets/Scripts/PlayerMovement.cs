@@ -198,6 +198,7 @@ public class PlayerMovement : MonoBehaviour
         if(lives <= 0)
         {
             print("You suck bruh restart ong ong");
+			SceneManager.LoadScene("DeathScreen");
         }
 		else
 		{

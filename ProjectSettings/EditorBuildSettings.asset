@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Lv1.unity
-    guid: 5b5dfd9d6a55d859a96fd7aecaad977e
+    path: Assets/Scenes/MainMenu.unity
+    guid: 703cfd7b1109043e39610208b9547cb8
+  - enabled: 1
+    path: Assets/Scenes/MetroidvaniaLevel.unity
+    guid: 363c4ad009f258f47bad62bcdd507a16
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: 6f3a0b50edf2b13c29c418f1c7749122
+  - enabled: 1
+    path: Assets/Scenes/EndMenu.unity
+    guid: 8782af58c46af923394390d28566e7b3
   m_configObjects: {}
